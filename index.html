@@ -21,9 +21,8 @@
             sizes="16x16"
             href="/favicon-16x16.png"
         />
-         <link rel="canonical" href="https://ronynn.github.io/cat-gen/" />
+        <link rel="canonical" href="https://ronynn.github.io/cat-gen/" />
         <link rel="manifest" href="/cat-gen/manifest.webmanifest" />
-    
 
         <title>The Cat Generator</title>
         <style>
@@ -35,6 +34,7 @@
                 align-items: center;
                 justify-content: center;
                 height: 100vh;
+                font-family: Courier, Monospace;
                 background: linear-gradient(to right, #ff7e5f, #feb47b);
             }
 
@@ -46,7 +46,7 @@
                 justify-content: center;
                 align-items: center;
                 background: rgba(255, 255, 255, 0.2);
-                border-radius: 20px;
+                border-radius: 30px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 overflow: hidden;
                 border: 10px solid rgba(255, 255, 255, 0.2); /* Border margin */
@@ -82,10 +82,84 @@
             .button:hover {
                 background: rgba(255, 255, 255, 0.8);
             }
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(5px);
+                color: white;
+                display: flex;
+                justify-content: left;
+                font-family: "Poppins", sans-serif;
+                z-index: 1000; /* Ensure the nav is above other content */
+            }
+
+            nav a {
+                display: flex;
+                align-items: center;
+                padding: 2px 2px 2px 2px; /* Adjust padding as needed */
+                text-decoration: none;
+                color: white;
+
+                margin: 0.5px;
+            }
+
+            nav a img {
+                width: 22px; /* Adjust image width as needed */
+                margin: 0.2px; /* Add spacing between image and text */
+                border-radius: 5px;
+            }
+
+            nav a:hover {
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+
+            nav a:nth-child(3) {
+                margin-left: auto;
+            }
+            footer {
+            	bottom:0;
+            	position:relative;
+            }
         </style>
+
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2749889536957447"
+            crossorigin="anonymous"
+        ></script>
     </head>
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-MDG8SVY9GB"
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-MDG8SVY9GB");
+    </script>
+
     <body>
-        <h1 class="title">The Cat Generator</h1>
+        <nav>
+            <a href="https://ronynn.github.io"
+                ><img src="https://github.com/ronynn.png"
+            /></a>
+
+            <a href="https://ronynn.github.io/cat-gen"> The Cat Generator</a>
+
+            <a href="https://m.youtube.com/@ronynn89">Youtube</a>
+            <a href="https://ronynn.github.io/blog/">Blog</a>
+            <a href="https://ronynn.github.io/portfolio">Portfolio</a>
+        </nav>
+<br/>
+<br/>
+        <h1 class="title">The Cat Generator</h1> 
         <div class="container">
             <img id="catImage" src="" alt="Random Cat Image" />
         </div>
@@ -118,6 +192,39 @@
             // Call the fetchCatImage function to load a cat image when the page loads
             fetchCatImage();
         </script>
+
+        <footer>
+            <hr />
+            <a
+                href="https://github.com/ronynn/cat-gen"
+                title="Go to GitHub repo"
+                ><img
+                    src="https://img.shields.io/static/v1?label=ronynn&message=cat-gen&color=blue&logo=github"
+                    alt="ronynn - cat-gen"
+            /></a>
+            <a href="https://github.com/ronynn/cat-gen"
+                ><img
+                    src="https://img.shields.io/github/stars/ronynn/weather?style=social"
+                    alt="stars - cat-gen" /></a
+            ><br />
+            
+            
+        </footer>
+        <script
+            type="text/javascript"
+            id="cookiebanner"
+            src="https://cdn.jsdelivr.net/gh/dobarkod/cookie-banner@1.2.2/dist/cookiebanner.min.js"
+            data-height="25px"
+            data-position="bottom"
+            data-moreinfo="https://ronynn.github.io/blog/privacy"
+            data-message="We use cookies to improve your app experience."
+        ></script>
+        <noscript>
+            <div class="noscript" style="text-align: center">
+                It's not a server based app so you need javascript to run this.
+            </div>
+        </noscript>
+
         <script>
             if (navigator.serviceWorker) {
                 navigator.serviceWorker.register("/cat-gen/sw.js", {
