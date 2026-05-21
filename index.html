@@ -221,7 +221,7 @@
     <img id="catImage" src="" alt="Random Cat Image" />
   </div>
 
-  <button class="button" onclick="this.innerHTML = ''; let i = 0; const emojis = ['⬆️', '↗️', '➡️', '↘️', '⬇️', '↙️', '⬅️', '↖️']; const interval = setInterval(() => { this.innerHTML = emojis[i % emojis.length]; i++; }, 200); setTimeout(() => location.reload(), 200);">
+  <button class="button" onclick="const btn = this; const originalText = btn.innerHTML; const loader = ['/', '-', '\\', '|']; let i = 0; const interval = setInterval(() => { btn.innerHTML = originalText.replace('❤️', loader[i % loader.length]); i++; }, 150); setTimeout(() => { clearInterval(interval); location.reload(); }, 600);">
     I Want More Cats ❤️
   </button>   
 
