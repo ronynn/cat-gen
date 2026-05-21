@@ -221,9 +221,9 @@
     <img id="catImage" src="" alt="Random Cat Image" />
   </div>
 
-  <button class="button" onclick="goatcounter.count({ path: 'cat-gen-button-clicked' }); setTimeout(() => location.reload(), 200);">
+  <button class="button" onclick="try { goatcounter.count({ path: 'cat-gen-button-clicked' }); } catch(e){} setTimeout(() => location.reload(), 200);">
     I Want More Cats ❤️
-  </button>
+  </button>   
 
 
 
